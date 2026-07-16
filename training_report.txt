@@ -1,0 +1,91 @@
+========================================================
+FinSpark'26 - AI Fraud Detection Training Report
+========================================================
+
+--- DATASET OVERVIEW ---
+Dataset Shape: (1000, 32)
+Fraud Ratio: 0.1100
+Total Features: 31
+
+--- AUTOMATIC FEATURE DETECTION ---
+Categorical Columns (6):
+  - merchant_category
+  - payment_method
+  - persona
+  - home_city
+  - login_city
+  - transaction_city
+
+Numerical Columns (25):
+  - amount
+  - average_transaction_amount
+  - amount_ratio
+  - transaction_hour
+  - transaction_day
+  - location_match
+  - location_changed
+  - new_device
+  - trusted_ip
+  - vpn_used
+  - failed_login_count
+  - password_reset
+  - otp_verified
+  - session_duration_minutes
+  - ip_reputation_score
+  - new_receiver
+  - receiver_trust_score
+  - receiver_risk_score
+  - high_risk_merchant
+  - night_transaction
+  - impossible_travel
+  - time_gap_minutes
+  - previous_transactions_last_1_hour
+  - previous_transactions_last_24_hours
+  - high_value_transaction
+
+========================================================
+--- EVALUATION METRICS ---
+========================================================
+Accuracy:  0.9850
+Precision: 1.0000
+Recall:    0.8636
+F1 Score:  0.9268
+
+--- CONFUSION MATRIX ---
+[[178   0]
+ [  3  19]]
+
+--- CLASSIFICATION REPORT ---
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       178
+           1       1.00      0.86      0.93        22
+
+    accuracy                           0.98       200
+   macro avg       0.99      0.93      0.96       200
+weighted avg       0.99      0.98      0.98       200
+
+
+========================================================
+--- TOP 20 FEATURE IMPORTANCE ---
+========================================================
+ 1. new_device                               0.175649
+ 2. amount_ratio                             0.146992
+ 3. receiver_risk_score                      0.090012
+ 4. ip_reputation_score                      0.078663
+ 5. receiver_trust_score                     0.076935
+ 6. high_value_transaction                   0.056589
+ 7. vpn_used                                 0.045613
+ 8. failed_login_count                       0.044092
+ 9. new_receiver                             0.026474
+10. amount                                   0.026374
+11. trusted_ip                               0.023424
+12. otp_verified                             0.019646
+13. impossible_travel                        0.015150
+14. high_risk_merchant                       0.012241
+15. login_city_Delhi                         0.010930
+16. merchant_category_Crypto                 0.010920
+17. session_duration_minutes                 0.010444
+18. average_transaction_amount               0.010238
+19. transaction_city_Delhi                   0.009946
+20. transaction_day                          0.008931
