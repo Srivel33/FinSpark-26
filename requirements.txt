@@ -1,0 +1,7 @@
+streamlit>=1.45.0
+pandas>=2.2.0
+numpy>=2.0.0
+scikit-learn>=1.7.0
+plotly>=6.0.0
+joblib>=1.5.0
+faker>=37.0.0
